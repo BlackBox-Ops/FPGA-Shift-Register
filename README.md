@@ -1,4 +1,4 @@
-#Eksplorasi Rangkaian Digital: Shift Register 💾
+# Eksplorasi Rangkaian Digital: Shift Register 💾
 Repositori ini berisi eksperimen dan implementasi nyata dari rangkaian digital shift register. 
 Rangkaian ini fundamental dalam arsitektur sistem memori dan komunikasi digital, 
 berfungsi untuk menyimpan dan menggeser bit data secara berurutan.
@@ -8,6 +8,7 @@ berfungsi untuk menyimpan dan menggeser bit data secara berurutan.
 ## Deskripsi
 Rangkaian ini mengambil data secara serial (bit per bit) melalui satu jalur input dan menyimpannya di setiap flip-flop. 
 Setelah semua bit masuk, data yang tersimpan bisa dikeluarkan secara bersamaan (paralel) melalui beberapa jalur output.
+
 ![Register_SIPO](Docs/SIPO.svg)
 
 ## Cara Kerja
@@ -20,6 +21,7 @@ menjadi data paralel, yang sering digunakan dalam decoder atau driver tampilan.
 ## Deskripsi 
 PIPO adalah jenis shift register yang paling sederhana. Rangkaian ini memungkinkan data untuk dimasukkan secara paralel (bersamaan) 
 dan dikeluarkan juga secara paralel. Fungsi utamanya adalah sebagai penyimpanan sementara atau buffer untuk data.
+
 ![Register_PIPO](Docs/PIPO.svg)
 
 ## Cara Kerja 
@@ -30,6 +32,7 @@ dan mengambilnya kembali juga secara bersamaan. Rangkaian PIPO digunakan untuk m
 
 ## Deskripsi
 Rangkaian PISO mengambil data secara paralel melalui beberapa jalur input dan mengeluarkannya secara serial (satu per satu) melalui satu jalur output.
+
 ![Register_PISO](Docs/PISO.svg)
 
 ## Cara Kerja
