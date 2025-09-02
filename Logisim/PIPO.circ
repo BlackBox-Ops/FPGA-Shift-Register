@@ -5,7 +5,7 @@
   <lib desc="#Wiring" name="0">
     <tool name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="facing" val="south"/>
+      <a name="facing" val="west"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -162,6 +162,9 @@
     <comp lib="8" loc="(1051,647)" name="Text">
       <a name="text" val="Bit 7"/>
     </comp>
+    <comp lib="8" loc="(1120,439)" name="Text">
+      <a name="text" val="LSB"/>
+    </comp>
     <comp lib="8" loc="(1179,648)" name="Text">
       <a name="text" val="Bit 8"/>
     </comp>
@@ -182,9 +185,6 @@
     </comp>
     <comp lib="8" loc="(712,647)" name="Text">
       <a name="text" val="Bit 4"/>
-    </comp>
-    <comp lib="8" loc="(787,441)" name="Text">
-      <a name="text" val="LSB"/>
     </comp>
     <comp lib="8" loc="(811,647)" name="Text">
       <a name="text" val="Bit 5"/>
