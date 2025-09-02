@@ -5,6 +5,7 @@
   <lib desc="#Wiring" name="0">
     <tool name="Pin">
       <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -64,13 +65,10 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="clabelup" val="north"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(160,440)" name="Pin">
+    <comp lib="0" loc="(1060,410)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="0" loc="(160,480)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="B"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="PH"/>
     </comp>
     <comp lib="0" loc="(230,540)" name="Clock">
       <a name="label" val="CLK"/>
@@ -100,7 +98,19 @@
       <a name="facing" val="south"/>
       <a name="label" val="PE"/>
     </comp>
-    <comp lib="1" loc="(240,460)" name="AND Gate"/>
+    <comp lib="0" loc="(850,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="PF"/>
+    </comp>
+    <comp lib="0" loc="(950,410)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="PG"/>
+    </comp>
+    <comp lib="4" loc="(1100,450)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp lib="4" loc="(310,450)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
@@ -115,6 +125,18 @@
     </comp>
     <comp lib="4" loc="(740,450)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(860,450)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(960,450)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="5" loc="(1050,610)" name="LED">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(1180,610)" name="LED">
+      <a name="facing" val="north"/>
     </comp>
     <comp lib="5" loc="(230,570)" name="Button">
       <a name="label" val="CLR"/>
@@ -134,11 +156,20 @@
     <comp lib="5" loc="(810,610)" name="LED">
       <a name="facing" val="north"/>
     </comp>
+    <comp lib="5" loc="(930,610)" name="LED">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="8" loc="(1051,647)" name="Text">
+      <a name="text" val="Bit 7"/>
+    </comp>
+    <comp lib="8" loc="(1179,648)" name="Text">
+      <a name="text" val="Bit 8"/>
+    </comp>
     <comp lib="8" loc="(296,445)" name="Text">
       <a name="text" val="MSB"/>
     </comp>
     <comp lib="8" loc="(321,359)" name="Text">
-      <a name="text" val="5-Bit Parallel Out Shift Register (PIPO)"/>
+      <a name="text" val="8-Bit Parallel Out Shift Register (PIPO)"/>
     </comp>
     <comp lib="8" loc="(394,649)" name="Text">
       <a name="text" val="Bit 1"/>
@@ -158,8 +189,22 @@
     <comp lib="8" loc="(811,647)" name="Text">
       <a name="text" val="Bit 5"/>
     </comp>
-    <wire from="(160,440)" to="(190,440)"/>
-    <wire from="(160,480)" to="(190,480)"/>
+    <comp lib="8" loc="(935,648)" name="Text">
+      <a name="text" val="Bit 6"/>
+    </comp>
+    <wire from="(1010,460)" to="(1050,460)"/>
+    <wire from="(1010,500)" to="(1030,500)"/>
+    <wire from="(1030,500)" to="(1030,570)"/>
+    <wire from="(1030,570)" to="(1160,570)"/>
+    <wire from="(1050,460)" to="(1050,610)"/>
+    <wire from="(1060,410)" to="(1060,460)"/>
+    <wire from="(1060,460)" to="(1090,460)"/>
+    <wire from="(1070,500)" to="(1070,540)"/>
+    <wire from="(1070,500)" to="(1090,500)"/>
+    <wire from="(1150,460)" to="(1180,460)"/>
+    <wire from="(1150,500)" to="(1160,500)"/>
+    <wire from="(1160,500)" to="(1160,570)"/>
+    <wire from="(1180,460)" to="(1180,610)"/>
     <wire from="(230,540)" to="(290,540)"/>
     <wire from="(230,570)" to="(370,570)"/>
     <wire from="(270,410)" to="(270,460)"/>
@@ -202,10 +247,25 @@
     <wire from="(710,460)" to="(710,610)"/>
     <wire from="(720,500)" to="(720,540)"/>
     <wire from="(720,500)" to="(730,500)"/>
+    <wire from="(720,540)" to="(840,540)"/>
     <wire from="(730,410)" to="(730,460)"/>
     <wire from="(790,460)" to="(810,460)"/>
     <wire from="(790,500)" to="(800,500)"/>
     <wire from="(800,500)" to="(800,570)"/>
+    <wire from="(800,570)" to="(920,570)"/>
     <wire from="(810,460)" to="(810,610)"/>
+    <wire from="(840,500)" to="(840,540)"/>
+    <wire from="(840,500)" to="(850,500)"/>
+    <wire from="(840,540)" to="(940,540)"/>
+    <wire from="(850,410)" to="(850,460)"/>
+    <wire from="(910,460)" to="(930,460)"/>
+    <wire from="(910,500)" to="(920,500)"/>
+    <wire from="(920,500)" to="(920,570)"/>
+    <wire from="(920,570)" to="(1030,570)"/>
+    <wire from="(930,460)" to="(930,610)"/>
+    <wire from="(940,500)" to="(940,540)"/>
+    <wire from="(940,500)" to="(950,500)"/>
+    <wire from="(940,540)" to="(1070,540)"/>
+    <wire from="(950,410)" to="(950,460)"/>
   </circuit>
 </project>
