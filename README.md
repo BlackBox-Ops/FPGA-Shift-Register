@@ -3,7 +3,11 @@ Repositori ini berisi eksperimen dan implementasi nyata dari rangkaian digital s
 Rangkaian ini fundamental dalam arsitektur sistem memori dan komunikasi digital, 
 berfungsi untuk menyimpan dan menggeser bit data secara berurutan.
 
-## 1.Rangkaian Shift Register (Serial In Pararel Out) SIPO
+# 1. Rangkaian Shift Register (Serial in Serial Out) SISO
+
+![Register_SIPO](Docs/SISO.svg)
+
+## 2.Rangkaian Shift Register (Serial In Pararel Out) SIPO
 
 ## Deskripsi
 Rangkaian ini mengambil data secara serial (bit per bit) melalui satu jalur input dan menyimpannya di setiap flip-flop. 
@@ -16,7 +20,7 @@ Bayangkan ini seperti antrean: setiap orang (bit data) masuk satu per satu, tapi
 mereka bisa keluar sekaligus dari pintu yang berbeda. Aplikasi utamanya adalah mengubah data serial 
 menjadi data paralel, yang sering digunakan dalam decoder atau driver tampilan.
 
-## 2. Rangkaian Shift Register (Pararel In Pararel Out) PIPO
+## 3. Rangkaian Shift Register (Pararel In Pararel Out) PIPO
 
 ## Deskripsi 
 PIPO adalah jenis shift register yang paling sederhana. Rangkaian ini memungkinkan data untuk dimasukkan secara paralel (bersamaan) 
@@ -28,7 +32,7 @@ dan dikeluarkan juga secara paralel. Fungsi utamanya adalah sebagai penyimpanan 
 Ini mirip seperti kotak penyimpanan dengan banyak laci: Anda bisa memasukkan semua barang (bit data) ke laci yang berbeda secara bersamaan, 
 dan mengambilnya kembali juga secara bersamaan. Rangkaian PIPO digunakan untuk menyinkronkan data atau menyimpan data sementara sebelum diproses lebih lanjut.
 
-## 3. Rangkaian Shift Register (Pararel In Serial Out) PISO
+## 4. Rangkaian Shift Register (Pararel In Serial Out) PISO
 
 ## Deskripsi
 Rangkaian PISO mengambil data secara paralel melalui beberapa jalur input dan mengeluarkannya secara serial (satu per satu) melalui satu jalur output.
