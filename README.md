@@ -47,5 +47,6 @@ Rangkaian PISO mengambil data secara paralel melalui beberapa jalur input dan me
 Fungsinya berkebalikan dengan SIPO. PISO seperti antrean di mana semua orang (bit data) bisa masuk sekaligus, tapi harus keluar satu per satu melalui satu pintu. 
 Rangkaian ini sangat berguna untuk mengirimkan data paralel jarak jauh menggunakan satu jalur transmisi tunggal, menghemat biaya dan kompleksitas kabel.
 
-
+## 5. Rangkaian Shift Register Bidrectional 
+![Biderectional](Docs/Biderectional.svg)
 
