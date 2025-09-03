@@ -3,7 +3,11 @@ Repositori ini berisi eksperimen dan implementasi nyata dari rangkaian digital s
 Rangkaian ini fundamental dalam arsitektur sistem memori dan komunikasi digital, 
 berfungsi untuk menyimpan dan menggeser bit data secara berurutan.
 
-# 1. Rangkaian Shift Register (Serial in Serial Out) SISO
+## 1. Rangkaian Shift Register (Serial in Serial Out) SISO
+
+## Deskripsi
+Bekerja dengan cara perpindahan datanya secara seri baik cara data masuk maupun data keluar, sehingga shift register ini hanya memiliki
+sebuah saluran masukan dan keluaran. Ada dua macam cara pergeseran seri berdasarkan arah pergeserannya, yaitu shift right dan shift left.
 
 ![Register_SIPO](Docs/SISO.svg)
 
