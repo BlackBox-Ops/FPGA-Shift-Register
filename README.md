@@ -50,3 +50,6 @@ Rangkaian ini sangat berguna untuk mengirimkan data paralel jarak jauh menggunak
 ## 5. Rangkaian Shift Register Bidrectional 
 ![Biderectional](Docs/Biderectional.svg)
 
+## 6. Rangkaian Shift Register Universal
+![Universal](Docs/Universal.svg)
+

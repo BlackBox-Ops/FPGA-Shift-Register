@@ -66,7 +66,7 @@
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(200,170)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="M"/>
+      <a name="label" val="LOAD"/>
     </comp>
     <comp lib="0" loc="(200,240)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -134,14 +134,14 @@
       <a name="facing" val="east"/>
     </comp>
     <comp lib="5" loc="(980,620)" name="LED"/>
-    <comp lib="8" loc="(191,219)" name="Text">
+    <comp lib="8" loc="(190,215)" name="Text">
       <a name="text" val="RIGHT SHIFT"/>
     </comp>
-    <comp lib="8" loc="(572,97)" name="Text">
+    <comp lib="8" loc="(570,95)" name="Text">
       <a name="font" val="SansSerif bolditalic 28"/>
       <a name="text" val="4 Bit Biderectional Shift Register"/>
     </comp>
-    <comp lib="8" loc="(950,216)" name="Text">
+    <comp lib="8" loc="(950,215)" name="Text">
       <a name="text" val="LEFT SHIFT"/>
     </comp>
     <wire from="(200,170)" to="(220,170)"/>
