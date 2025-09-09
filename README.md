@@ -9,13 +9,15 @@ Fungsi utamanya adalah untuk **menyimpan** dan **menggeser bit data** secara ber
 
 ## 📑 Daftar Isi
 1. [Shift Register Serial-In Serial-Out (SISO)](#1-rangkaian-shift-register-serial-in-serial-out-siso)  
-2. [Shift Register Serial-In Parallel-Out (SIPO)](#2-rangkaian-shift-register-serial-in-pararel-out-sipo)  
-3. [Shift Register Parallel-In Parallel-Out (PIPO)](#3-rangkaian-shift-register-pararel-in-pararel-out-pipo)  
-4. [Shift Register Parallel-In Serial-Out (PISO)](#4-rangkaian-shift-register-pararel-in-serial-out-piso)  
-5. [Shift Register Bidirectional](#5-rangkaian-shift-register-bidrectional)  
+2. [Shift Register Serial-In Parallel-Out (SIPO)](#2-rangkaian-shift-register-serial-in-parallel-out-sipo)  
+3. [Shift Register Parallel-In Parallel-Out (PIPO)](#3-rangkaian-shift-register-parallel-in-parallel-out-pipo)  
+4. [Shift Register Parallel-In Serial-Out (PISO)](#4-rangkaian-shift-register-parallel-in-serial-out-piso)  
+5. [Shift Register Bidirectional](#5-rangkaian-shift-register-bidirectional)  
 6. [Shift Register Universal](#6-rangkaian-shift-register-universal)  
-7. [Aplikasi Nyata](#aplikasi-nyata)  
-8. [Lisensi](#lisensi)  
+7. [Tabel Logika Shift Register](#-tabel-logika-shift-register)  
+8. [Aplikasi Nyata](#-aplikasi-nyata)  
+9. [Referensi](#-referensi)  
+10. [Lisensi](#-lisensi)  
 
 ---
 
@@ -38,7 +40,7 @@ Setiap orang (bit data) masuk berurutan, lalu keluar berurutan juga.
 ## 2. Rangkaian Shift Register (Serial-In Parallel-Out) **SIPO**
 
 ### Deskripsi
-- Data masuk secara serial, satu jalur input.  
+- Data masuk secara serial melalui satu jalur input.  
 - Setelah semua bit masuk, hasilnya bisa dibaca sekaligus melalui beberapa jalur output paralel.  
 
 ![Register_SIPO](Docs/SIPO.svg)
@@ -106,19 +108,88 @@ Kebalikan dari SIPO. Semua orang (bit data) bisa masuk bersamaan, tapi keluar sa
 
 ---
 
+## 🔢 Tabel Logika Shift Register
+
+### 1. Serial-In Serial-Out (SISO)
+
+| Clock | Input (Din) | Q0 (out) | Q1 | Q2 | Q3 |
+|-------|-------------|----------|----|----|----|
+| 0     | 1           | 1        | 0  | 0  | 0  |
+| 1     | 0           | 0        | 1  | 0  | 0  |
+| 2     | 1           | 1        | 0  | 1  | 0  |
+| 3     | 1           | 1        | 1  | 0  | 1  |
+
+---
+
+### 2. Serial-In Parallel-Out (SIPO)
+
+| Clock | Input (Din) | Q0 | Q1 | Q2 | Q3 (Parallel Out) |
+|-------|-------------|----|----|----|-------------------|
+| 0     | 1           | 1  | 0  | 0  | 0                 |
+| 1     | 0           | 0  | 1  | 0  | 0                 |
+| 2     | 1           | 1  | 0  | 1  | 0                 |
+| 3     | 1           | 1  | 1  | 0  | 1                 |
+
+---
+
+### 3. Parallel-In Parallel-Out (PIPO)
+
+| Load (Enable) | Input D0 | Input D1 | Input D2 | Input D3 | Q0 | Q1 | Q2 | Q3 |
+|---------------|----------|----------|----------|----------|----|----|----|----|
+| 1             | 1        | 0        | 1        | 1        | 1  | 0  | 1  | 1  |
+| 0             | X        | X        | X        | X        | 1  | 0  | 1  | 1  |
+
+> Saat `Load=1`, data langsung tersimpan di register.  
+> Saat `Load=0`, output tetap (tidak berubah).
+
+---
+
+### 4. Parallel-In Serial-Out (PISO)
+
+| Load | Input D0 | Input D1 | Input D2 | Input D3 | Serial Out (Q) |
+|------|----------|----------|----------|----------|----------------|
+| 1    | 1        | 0        | 1        | 1        | Ready to shift |
+| 0    | X        | X        | X        | X        | 1 → 0 → 1 → 1 |
+
+---
+
+### 5. Bidirectional Shift Register
+
+| Mode        | Clock | Din | Q0 | Q1 | Q2 | Q3 |
+|-------------|-------|-----|----|----|----|----|
+| Shift Left  | ↑     | 1   | 0  | 1  | 1  | 1  |
+| Shift Right | ↑     | 0   | 0  | 0  | 1  | 1  |
+
+> **Mode control** menentukan arah pergeseran.  
+
+---
+
+### 6. Universal Shift Register
+
+| S1 | S0 | Operasi                        |
+|----|----|--------------------------------|
+| 0  | 0  | Tahan (No Change)              |
+| 0  | 1  | Shift Kanan (Serial In Right)  |
+| 1  | 0  | Shift Kiri (Serial In Left)    |
+| 1  | 1  | Load Paralel (Parallel In)     |
+
+> Universal register mendukung semua mode: SISO, SIPO, PISO, PIPO.  
+
+---
+
 ## 📌 Aplikasi Nyata
 Shift register banyak dipakai dalam:
-- **Komunikasi data:** UART, SPI, I²C.  
-- **Driver tampilan:** 74HC595 untuk mengendalikan LED matrix atau 7-segmen.  
-- **Memori sementara:** buffer data, register di prosesor.  
-- **Sistem kontrol:** konversi data serial ↔ paralel.  
+- **Komunikasi data:** UART, SPI, I²C  
+- **Driver tampilan:** IC 74HC595 untuk LED matrix atau 7-segmen  
+- **Memori sementara:** buffer data, register di prosesor  
+- **Sistem kontrol:** konversi data serial ↔ paralel  
 
 ---
 
 ## 📖 Referensi
-- Floyd, T. L. *Digital Fundamentals*.  
-- Datasheet IC 74HC595, 74HC194.  
-- Modul Praktikum Sistem Digital.  
+- Floyd, T. L. *Digital Fundamentals*  
+- Datasheet IC 74HC595, 74HC194  
+- Modul Praktikum Sistem Digital  
 
 ---
 
