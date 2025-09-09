@@ -1,55 +1,130 @@
 # Eksplorasi Rangkaian Digital: Shift Register 💾
-Repositori ini berisi eksperimen dan implementasi nyata dari rangkaian digital shift register. 
-Rangkaian ini fundamental dalam arsitektur sistem memori dan komunikasi digital, 
-berfungsi untuk menyimpan dan menggeser bit data secara berurutan.
 
-## 1. Rangkaian Shift Register (Serial in Serial Out) SISO
+Repositori ini berisi eksperimen dan implementasi nyata dari berbagai jenis rangkaian **shift register**.  
+Shift register adalah salah satu rangkaian fundamental dalam arsitektur sistem digital, terutama pada **memori, komunikasi data, dan pengolahan sinyal**.  
 
-## Deskripsi
-Bekerja dengan cara perpindahan datanya secara seri baik cara data masuk maupun data keluar, sehingga shift register ini hanya memiliki
-sebuah saluran masukan dan keluaran. Ada dua macam cara pergeseran seri berdasarkan arah pergeserannya, yaitu shift right dan shift left.
+Fungsi utamanya adalah untuk **menyimpan** dan **menggeser bit data** secara berurutan sesuai sinyal clock.  
 
-![Register_SIPO](Docs/SISO.svg)
+---
 
-## 2.Rangkaian Shift Register (Serial In Pararel Out) SIPO
+## 📑 Daftar Isi
+1. [Shift Register Serial-In Serial-Out (SISO)](#1-rangkaian-shift-register-serial-in-serial-out-siso)  
+2. [Shift Register Serial-In Parallel-Out (SIPO)](#2-rangkaian-shift-register-serial-in-pararel-out-sipo)  
+3. [Shift Register Parallel-In Parallel-Out (PIPO)](#3-rangkaian-shift-register-pararel-in-pararel-out-pipo)  
+4. [Shift Register Parallel-In Serial-Out (PISO)](#4-rangkaian-shift-register-pararel-in-serial-out-piso)  
+5. [Shift Register Bidirectional](#5-rangkaian-shift-register-bidrectional)  
+6. [Shift Register Universal](#6-rangkaian-shift-register-universal)  
+7. [Aplikasi Nyata](#aplikasi-nyata)  
+8. [Lisensi](#lisensi)  
 
-## Deskripsi
-Rangkaian ini mengambil data secara serial (bit per bit) melalui satu jalur input dan menyimpannya di setiap flip-flop. 
-Setelah semua bit masuk, data yang tersimpan bisa dikeluarkan secara bersamaan (paralel) melalui beberapa jalur output.
+---
+
+## 1. Rangkaian Shift Register (Serial-In Serial-Out) **SISO**
+
+### Deskripsi
+- Data masuk **bit per bit** secara serial.  
+- Data keluar juga **bit per bit** secara serial.  
+- Terdiri dari satu input dan satu output.  
+- Bisa digeser ke kanan (*shift right*) atau ke kiri (*shift left*).  
+
+![Register_SISO](Docs/SISO.svg)
+
+### Cara Kerja
+Bayangkan sebuah lorong sempit hanya dengan **satu pintu masuk dan satu pintu keluar**.  
+Setiap orang (bit data) masuk berurutan, lalu keluar berurutan juga.  
+
+---
+
+## 2. Rangkaian Shift Register (Serial-In Parallel-Out) **SIPO**
+
+### Deskripsi
+- Data masuk secara serial, satu jalur input.  
+- Setelah semua bit masuk, hasilnya bisa dibaca sekaligus melalui beberapa jalur output paralel.  
 
 ![Register_SIPO](Docs/SIPO.svg)
 
-## Cara Kerja
-Bayangkan ini seperti antrean: setiap orang (bit data) masuk satu per satu, tapi begitu semua sudah di dalam, 
-mereka bisa keluar sekaligus dari pintu yang berbeda. Aplikasi utamanya adalah mengubah data serial 
-menjadi data paralel, yang sering digunakan dalam decoder atau driver tampilan.
+### Cara Kerja
+Seperti antrean: orang (bit data) masuk satu per satu. Setelah semua sudah di dalam, mereka bisa keluar bersamaan lewat pintu berbeda.  
 
-## 3. Rangkaian Shift Register (Pararel In Pararel Out) PIPO
+**Aplikasi:** Mengubah data serial menjadi paralel, sering digunakan pada **decoder, driver LED display, atau komunikasi UART ke perangkat paralel**.  
 
-## Deskripsi 
-PIPO adalah jenis shift register yang paling sederhana. Rangkaian ini memungkinkan data untuk dimasukkan secara paralel (bersamaan) 
-dan dikeluarkan juga secara paralel. Fungsi utamanya adalah sebagai penyimpanan sementara atau buffer untuk data.
+---
+
+## 3. Rangkaian Shift Register (Parallel-In Parallel-Out) **PIPO**
+
+### Deskripsi
+- Data dimasukkan sekaligus (paralel).  
+- Data dikeluarkan juga sekaligus (paralel).  
+- Fungsi utamanya adalah **penyimpanan sementara (buffer)**.  
 
 ![Register_PIPO](Docs/PIPO.svg)
 
-## Cara Kerja 
-Ini mirip seperti kotak penyimpanan dengan banyak laci: Anda bisa memasukkan semua barang (bit data) ke laci yang berbeda secara bersamaan, 
-dan mengambilnya kembali juga secara bersamaan. Rangkaian PIPO digunakan untuk menyinkronkan data atau menyimpan data sementara sebelum diproses lebih lanjut.
+### Cara Kerja
+Seperti **kotak dengan banyak laci**: semua barang (bit) bisa dimasukkan bersamaan, dan bisa diambil bersamaan juga.  
 
-## 4. Rangkaian Shift Register (Pararel In Serial Out) PISO
+**Aplikasi:** Sinkronisasi data, buffer sementara sebelum diproses.  
 
-## Deskripsi
-Rangkaian PISO mengambil data secara paralel melalui beberapa jalur input dan mengeluarkannya secara serial (satu per satu) melalui satu jalur output.
+---
+
+## 4. Rangkaian Shift Register (Parallel-In Serial-Out) **PISO**
+
+### Deskripsi
+- Data masuk paralel (semua bit sekaligus).  
+- Data keluar serial (bit per bit).  
 
 ![Register_PISO](Docs/PISO.svg)
 
-## Cara Kerja
-Fungsinya berkebalikan dengan SIPO. PISO seperti antrean di mana semua orang (bit data) bisa masuk sekaligus, tapi harus keluar satu per satu melalui satu pintu. 
-Rangkaian ini sangat berguna untuk mengirimkan data paralel jarak jauh menggunakan satu jalur transmisi tunggal, menghemat biaya dan kompleksitas kabel.
+### Cara Kerja
+Kebalikan dari SIPO. Semua orang (bit data) bisa masuk bersamaan, tapi keluar satu per satu lewat pintu tunggal.  
 
-## 5. Rangkaian Shift Register Bidrectional 
+**Aplikasi:** Efisiensi transmisi data, misalnya mengirim data paralel lewat **satu jalur komunikasi tunggal**.  
+
+---
+
+## 5. Rangkaian Shift Register **Bidirectional**
+
+### Deskripsi
+- Data bisa digeser ke **kanan atau kiri** sesuai kontrol.  
+- Fleksibel dalam pergeseran bit.  
+
 ![Biderectional](Docs/Biderectional.svg)
 
-## 6. Rangkaian Shift Register Universal
+**Aplikasi:** Operasi aritmatika (perkalian/pembagian dengan basis 2), buffer data dua arah.  
+
+---
+
+## 6. Rangkaian Shift Register **Universal**
+
+### Deskripsi
+- Shift register paling fleksibel.  
+- Mendukung semua mode: **SISO, SIPO, PISO, PIPO, serta shift kiri/kanan**.  
+- Terdapat input kontrol tambahan untuk memilih mode.  
+
 ![Universal](Docs/Universal.svg)
+
+**Aplikasi:** Digunakan dalam sistem kompleks seperti **CPU, register umum, hingga pengendali komunikasi**.  
+
+---
+
+## 📌 Aplikasi Nyata
+Shift register banyak dipakai dalam:
+- **Komunikasi data:** UART, SPI, I²C.  
+- **Driver tampilan:** 74HC595 untuk mengendalikan LED matrix atau 7-segmen.  
+- **Memori sementara:** buffer data, register di prosesor.  
+- **Sistem kontrol:** konversi data serial ↔ paralel.  
+
+---
+
+## 📖 Referensi
+- Floyd, T. L. *Digital Fundamentals*.  
+- Datasheet IC 74HC595, 74HC194.  
+- Modul Praktikum Sistem Digital.  
+
+---
+
+## 📝 Lisensi
+Proyek ini dirilis dengan lisensi **MIT**.  
+Silakan digunakan, dimodifikasi, dan dikembangkan lebih lanjut untuk tujuan pembelajaran.  
+
+---
 
