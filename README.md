@@ -34,6 +34,8 @@ Memahami prinsip konversi data serial menjadi paralel.
 Melihat bagaimana register dapat digunakan untuk ekspansi jumlah output Arduino dengan hanya beberapa pin kontrol.
 Simulasi dilakukan pada platform Thinkercad, dan dapat diperluas ke implementasi nyata dengan Arduino + IC 74HC595.
 
+Docs : https://www.tinkercad.com/things/hI911vPtwws-shift-register-sipo-and-siso?sharecode=i3ZuxDJhQGnT1vCE2rxtIZ61mJWZeT6Ig6DGM1tJlQg
+
 ## 1. Rangkaian Shift Register (Serial-In Serial-Out) **SISO**
 
 ### Deskripsi
@@ -43,8 +45,6 @@ Simulasi dilakukan pada platform Thinkercad, dan dapat diperluas ke implementasi
 - Bisa digeser ke kanan (*shift right*) atau ke kiri (*shift left*).  
 
 ![Register_SISO](Docs/SISO.svg)
-
-Docs : https://www.tinkercad.com/things/hI911vPtwws-shift-register-sipo-and-siso?sharecode=i3ZuxDJhQGnT1vCE2rxtIZ61mJWZeT6Ig6DGM1tJlQg
 
 ### Cara Kerja
 Bayangkan sebuah lorong sempit hanya dengan **satu pintu masuk dan satu pintu keluar**.  
