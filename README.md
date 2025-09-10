@@ -22,6 +22,19 @@ Fungsi utamanya adalah untuk **menyimpan** dan **menggeser bit data** secara ber
 ---
 
 ## 0. Simulasi Shift Register SIPO dengan IC 74HC595
+
+### Deskripsi
+
+Pada bagian ini saya mengimplementasikan IC 74HC595 sebagai Serial-In Parallel-Out (SIPO) shift register menggunakan Arduino Uno.
+Data dikirim secara serial (bit demi bit) melalui pin data dan clock, lalu setelah 8 bit penuh, hasilnya ditampilkan bersamaan melalui 8 output paralel yang dihubungkan ke LED.
+
+### Tujuan eksperimen:
+
+Memahami prinsip konversi data serial menjadi paralel.
+
+Melihat bagaimana register dapat digunakan untuk ekspansi jumlah output Arduino dengan hanya beberapa pin kontrol.
+
+Simulasi dilakukan pada platform Thinkercad, dan dapat diperluas ke implementasi nyata dengan Arduino + IC 74HC595.
 ![74HC595](Docs/SIPO.png)
 
 ## 1. Rangkaian Shift Register (Serial-In Serial-Out) **SISO**
