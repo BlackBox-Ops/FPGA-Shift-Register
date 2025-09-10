@@ -44,11 +44,12 @@ Simulasi dilakukan pada platform Thinkercad, dan dapat diperluas ke implementasi
 
 ![Register_SISO](Docs/SISO.svg)
 
+Docs : https://www.tinkercad.com/things/hI911vPtwws-shift-register-sipo-and-siso?sharecode=i3ZuxDJhQGnT1vCE2rxtIZ61mJWZeT6Ig6DGM1tJlQg
+
 ### Cara Kerja
 Bayangkan sebuah lorong sempit hanya dengan **satu pintu masuk dan satu pintu keluar**.  
 Setiap orang (bit data) masuk berurutan, lalu keluar berurutan juga.  
 
-Docs : https://www.tinkercad.com/things/hI911vPtwws-shift-register-sipo-and-siso?sharecode=i3ZuxDJhQGnT1vCE2rxtIZ61mJWZeT6Ig6DGM1tJlQg
 
 ---
 
