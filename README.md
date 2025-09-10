@@ -21,6 +21,9 @@ Fungsi utamanya adalah untuk **menyimpan** dan **menggeser bit data** secara ber
 
 ---
 
+## 0. Simulasi Shift Register SIPO dengan IC 74HC595
+![74HC595](Docs/SIPO.png)
+
 ## 1. Rangkaian Shift Register (Serial-In Serial-Out) **SISO**
 
 ### Deskripsi
